@@ -120,6 +120,7 @@ module.exports = function (app) {
     #swagger.start
     */
     app.post('/api/delete',deleteToken);
+	app.get('/api/health',healthCheck);
     app.listen(PORT,() => console.log(`Server running on port: ${PORT}`)); 
 }
 
