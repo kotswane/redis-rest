@@ -31,7 +31,7 @@ export async function createKey(data){
     const redisClient = connectRedis();
 
     
-     return await redisClient.set(data.id+"-"+data.site,  data.site+"-"+uuidGenerator(), 'EX',5*60, (err, result) => {
+     return await redisClient.set(data.id+"-"+data.site,  data.site+"-"+uuidGenerator(), 'EX',10*60, (err, result) => {
        
         if (result) {
             console.log("result: ",result)
